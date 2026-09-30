@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Palitaw Express | Filipino Palitaw Delivery</title>
+  <meta name="description" content="Freshly made Filipino Palitaw delivered to your door.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== HEADER / NAVIGATION ===== -->
+<header class="site-header">
+  <nav class="nav">
+    <a href="#home" class="logo">Palitaw<span>Express</span></a>
+    <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <ul class="links" id="links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><button class="cart-btn" id="cartBtn">Cart 🛒 <b id="cartCount">0</b></button></li>
+    </ul>
+  </nav>
+  <div class="weave" aria-hidden="true"></div>
+</header>
+
+<main id="home">
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-text">
+      <p class="chip">🚚 Freshly prepared • Fast delivery • Filipino-made</p>
+      <h1>Authentic Filipino Palitaw, Delivered Fresh.</h1>
+      <p>Enjoy soft, chewy, freshly prepared Palitaw topped with coconut, sugar, and sesame. Order your favorite Filipino delicacy and have it delivered straight to your doorstep.</p>
+      <div class="btn-row">
+        <a href="#menu" class="btn">Order Now</a>
+        <a href="#featured" class="btn ghost">Explore Menu</a>
+      </div>
+      <p class="tag">“A Taste of Filipino Tradition, Delivered to Your Door.”</p>
+    </div>
+    <div class="hero-img"><img src="imgaes/cheese-palitaw.jpg" alt="Plate of Classic Palitaw with coconut and sesame"></div>
+  </section>
+
+  <!-- ===== FEATURED ===== -->
+  <section class="section" id="featured">
+    <h2>Our Favorite Palitaw</h2>
+    <div class="grid" id="featuredGrid"></div>
+  </section>
+
+  <!-- ===== MENU (filters + search) ===== -->
+  <section class="section alt" id="menu">
+    <h2>Full Menu</h2>
+    <input type="search" id="search" class="search" placeholder="Search for your favorite Palitaw..." aria-label="Search products">
+    <div class="filters" id="filters">
+      <button class="chipbtn active" data-cat="all">All</button>
+      <button class="chipbtn" data-cat="classic">Classic</button>
+      <button class="chipbtn" data-cat="special">Special</button>
+      <button class="chipbtn" data-cat="ube">Ube</button>
+      <button class="chipbtn" data-cat="cheese">Cheese</button>
+    </div>
+    <div class="grid" id="menuGrid"></div>
+    <p class="empty" id="empty" hidden>No Palitaw found. Try another search.</p>
+  </section>
+
+  <!-- ===== ORDER TRACKING (shown after checkout) ===== -->
+  <section class="section" id="tracking" hidden>
+    <h2>Order Status</h2>
+    <p class="center" id="trackId"></p>
+    <ol class="steps" id="steps">
+      <li>✅ Order Confirmed</li>
+      <li>🧑‍🍳 Preparing Your Palitaw</li>
+      <li>🚚 Out for Delivery</li>
+      <li>🏠 Delivered</li>
+    </ol>
+    <p class="center"><strong>Estimated Delivery: 20–40 minutes</strong></p>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section alt" id="about">
+    <h2>Made With Filipino Tradition</h2>
+    <p class="lead">Palitaw is a traditional Filipino rice cake made from glutinous rice dough. It is commonly served with grated coconut, sugar, and sesame seeds. Palitaw Express brings this familiar Filipino delicacy into a convenient modern food-delivery experience.</p>
+    <div class="grid three">
+      <article class="feature"><span>🇵🇭</span><h3>Filipino Tradition</h3><p>Authentic Filipino-inspired flavors.</p></article>
+      <article class="feature"><span>🥥</span><h3>Fresh Ingredients</h3><p>Prepared fresh for every order.</p></article>
+      <article class="feature"><span>🚚</span><h3>Fast Delivery</h3><p>Enjoy your Palitaw without leaving home.</p></article>
+    </div>
+  </section>
+
+  <!-- ===== REVIEWS ===== -->
+  <section class="section">
+    <h2>What Customers Say</h2>
+    <div class="grid three">
+      <blockquote class="review">⭐⭐⭐⭐⭐<p>“The Palitaw tastes just like the one I grew up eating!”</p><cite>— Maria</cite></blockquote>
+      <blockquote class="review">⭐⭐⭐⭐⭐<p>“Soft, sweet, and delivered quickly. Highly recommended!”</p><cite>— Carlo</cite></blockquote>
+      <blockquote class="review">⭐⭐⭐⭐⭐<p>“The ube Palitaw is my favorite!”</p><cite>— Angela</cite></blockquote>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section alt" id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact">
+      <div>
+        <h3>Palitaw Express</h3>
+        <p>📍 Location: Borongan, Eastern Samar</p>
+        <p>📞 Phone: 05518885627</p>
+        <p>📧 Email: <a href="mailto:palitawballs@gmail.com">palitawballs@gmail.com</a></p>
+      </div>
+      <form id="contactForm" novalidate>
+        <label>Name <input name="name" required></label>
+        <label>Email <input name="email" type="email" required></label>
+        <label>Message <textarea name="message" rows="4" required></textarea></label>
+        <button class="btn" type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="weave" aria-hidden="true"></div>
+  <h3>PALITAW EXPRESS</h3>
+  <p>“A Taste of Filipino Tradition, Delivered to Your Door.”</p>
+  <ul class="flinks">
+    <li><a href="#home">Home</a></li><li><a href="#menu">Menu</a></li><li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li><li><a href="#cart" id="footCart">Cart</a></li>
+  </ul>
+  <div class="social">
+    <a href="https://www.facebook.com/profile.php?id=61593609072567" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8V6c0-1 .5-1.5 1.500-1.500H17V1h-3c-3 0-4.500 2-4.500 4.500V8H7v3.500h2.500V23H14V11.500h2.800L17.300 8z"/></svg></a>
+    <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3zm5 3.500a4.500 4.500 0 110 9 4.500 4.500 0 010-9zm0 2a2.500 2.500 0 100 5 2.500 2.500 0 000-5zM17.500 5.500a1 1 0 110 2 1 1 0 010-2z"/></svg></a>
+    <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M16 2h-3v13.500a2.500 2.500 0 11-2.500-2.500c.3 0 .6 0 .9.100V10a5.500 5.500 0 105.600 5.500V8.500A6.500 6.500 0 0020 9.800V6.700A3.700 3.700 0 0116 2z"/></svg></a>
+  </div>
+  <small>© 2026 Palitaw Express. All Rights Reserved.</small>
+</footer>
+
+<!-- ===== CART DRAWER ===== -->
+<div class="overlay" id="cartOverlay" hidden></div>
+<aside class="drawer" id="cart" aria-label="Shopping cart" hidden>
+  <div class="drawer-head"><h2>Your Cart</h2><button class="x" data-close="cart" aria-label="Close cart">✕</button></div>
+  <div id="cartItems"></div>
+  <div class="totals" id="totals"></div>
+  <button class="btn block" id="checkoutBtn">Checkout</button>
+</aside>
+
+<!-- ===== PRODUCT MODAL ===== -->
+<div class="modal" id="productModal" hidden role="dialog" aria-modal="true" aria-label="Product details">
+  <div class="dialog">
+    <button class="x" data-close="productModal" aria-label="Close">✕</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<!-- ===== CHECKOUT MODAL ===== -->
+<div class="modal" id="checkoutModal" hidden role="dialog" aria-modal="true" aria-label="Checkout">
+  <div class="dialog">
+    <button class="x" data-close="checkoutModal" aria-label="Close">✕</button>
+    <div id="checkoutBody">
+      <h2>Checkout</h2>
+      <form id="checkoutForm" novalidate>
+        <h3>Customer Information</h3>
+        <label>Full Name <input name="name" autocomplete="name"></label>
+        <label>Mobile Number <input name="phone" inputmode="tel" placeholder="09XX-XXX-XXXX"></label>
+        <label>Delivery Address <input name="address" autocomplete="street-address"></label>
+        <label>Landmark <input name="landmark"></label>
+        <h3>Delivery Instructions</h3>
+        <textarea name="notes" rows="3" placeholder="Additional instructions (optional)"></textarea>
+        <h3>Payment Method</h3>
+        <div class="pay">
+          <label><input type="radio" name="pay" value="Cash on Delivery" checked> Cash on Delivery</label>
+          <label><input type="radio" name="pay" value="GCash"> GCash</label>
+        </div>
+        <h3>Order Summary</h3>
+        <div id="summary" class="summary"></div>
+        <button class="btn block" type="submit">Place Order</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="toasts" id="toasts" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
